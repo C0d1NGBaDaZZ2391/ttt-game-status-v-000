@@ -60,18 +60,14 @@ end
 
 def winner(board)
 
-  WIN_COMBINATIONS.each do |win_combination|
-  if win_combination.any? {|index| board[index] == "X"}
+if (draw?(board) || !full?(board)) && !won?(board)
+  return nil
+elsif (board[won?(board)[0]] == "X")
     return "X"
-  else
+elsif (board[won?(board)[0]] == "O")
     return "O"
   end
 end
 
 
-  else
-    return nil
-  end
-
-
-winner(board)
+  
