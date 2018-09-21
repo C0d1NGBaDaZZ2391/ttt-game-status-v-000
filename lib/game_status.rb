@@ -59,7 +59,6 @@ def over?(board)
 end
 
 def winner(board)
-
 if (draw?(board) || !full?(board)) && !won?(board)
   return nil
 elsif (board[won?(board)[0]] == "X")
@@ -68,6 +67,3 @@ elsif (board[won?(board)[0]] == "O")
     return "O"
   end
 end
-
-
-  
